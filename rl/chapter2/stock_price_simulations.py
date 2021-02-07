@@ -14,6 +14,7 @@ class Process1:
     class State:
         price: int
 
+
     level_param: int  # level to which price mean-reverts
     alpha1: float = 0.25  # strength of mean-reversion (non-negative value)
 
