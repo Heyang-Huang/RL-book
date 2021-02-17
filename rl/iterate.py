@@ -49,14 +49,16 @@ def converge(values: Iterator[X], done: Callable[[X, X], bool]) -> Iterator[X]:
     Will loop forever if the input iterator doesn't end *or* converge.
 
     '''
+    
     a = next(values, None)
     if a is None:
         return
-
     yield a
-
+    counter=-1
     for b in values:
+        counter=counter+1
         if done(a, b):
+            print("Number of Iterations:",counter)
             return
 
         a = b
